@@ -1,0 +1,5 @@
+{
+  "name": "ALE-RR Payroll Explorer",
+  "description": "Uma ferramenta especializada para análise, consulta e exportação dos dados de servidores da Assembleia Legislativa de Roraima, com suporte a geração de PDFs consolidados.",
+  "requestFramePermissions": []
+}
