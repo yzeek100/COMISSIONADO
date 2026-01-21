@@ -1,5 +1,9 @@
 {
-  "name": "ALE-RR Payroll Explorer",
-  "description": "Uma ferramenta especializada para análise, consulta e exportação dos dados de servidores da Assembleia Legislativa de Roraima, com suporte a geração de PDFs consolidados.",
-  "requestFramePermissions": []
+  "name": "Elysium Hub - Premium Creator Marketplace",
+  "description": "A sophisticated SaaS marketplace for digital creators focusing on private video calls, exclusive sessions, and digital content with integrated payment mediation and automated commission handling.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
 }

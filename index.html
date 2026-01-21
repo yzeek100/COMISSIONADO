@@ -1,29 +1,67 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALE-RR Payroll Explorer</title>
+    <title>Elysium Hub - Premium Marketplace</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --brand-pink: #F13E5A;
+          --deep-slate: #0F172A;
+        }
+        body { 
+          font-family: 'Plus Jakarta Sans', sans-serif; 
+          background-color: #F8FAFC; 
+          color: var(--deep-slate); 
+          letter-spacing: -0.01em;
+          overflow-x: hidden;
+        }
+        
+        .bg-brand-pink { background-color: var(--brand-pink); }
+        .text-brand-pink { color: var(--brand-pink); }
+        .border-brand-pink { border-color: var(--brand-pink); }
+        .accent-brand-pink { accent-color: var(--brand-pink); }
+
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--brand-pink); }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .shadow-premium {
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        }
+
+        @keyframes pulse-soft {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+        .animate-pulse-soft { animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    </style>
 <script type="importmap">
 {
   "imports": {
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.39.0"
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body>
     <div id="root"></div>
-    <script>
-        // Configuração necessária para o PDF.js
-        window['pdfjs-dist/build/pdf'].GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-    </script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
